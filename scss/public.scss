@@ -1,0 +1,204 @@
+@import "_oa";
+
+* {
+  &, &:after, &:before {
+    vertical-align: top;
+    @include box-sizing(border-box);
+    @include selection(rgba(150, 200, 255, 1), rgba(255, 255, 255, 1));
+    @include font-smoothing(antialiased);
+  }
+}
+
+html {
+  min-height: 100%;
+
+  body {
+    position: relative;
+
+    display: inline-block;
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+
+    color: rgba(90, 90, 90, 1.00);
+    text-align: center;
+    font-size: 1rem;  /* 1*12px=12px */
+    // font-size: medium;
+    font-family: Roboto, RobotoDraft, Helvetica, Arial, sans-serif, "微軟正黑體", "Microsoft JhengHei";
+
+    background: white;
+    // background-image: $mainBackgroundImage;
+
+    @include font-smoothing(antialiased);
+
+    &.grayBG {
+      background-color: rgba(244, 243, 243, 1.00);
+    }
+  }
+}
+
+$Dellblue: rgba(0, 81, 162, 1.00);
+$gray: rgba(91, 91, 91, 1.00);
+$blue:rgba(0, 150, 230, 1.00);
+$Dellorange: rgba(232, 86, 3, 1.00);
+$lightgray: rgba(184, 184, 184, 1.00);
+
+.main {
+  display: inline-block;
+  width: 100%;
+
+  // 上方header
+  header {
+    display: inline-block;
+    width: 100%;
+    height: 45px;
+    text-align: left;
+    padding: 8px 20px;
+    position: fixed;
+    top: 0;
+    @include background-image(linear-gradient(left, rgba(0,55,144,1), rgba(0,150,229,1)));  
+
+    .nav_boxs {
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      
+      &.icon-menu {
+        font-size: 1.3rem;
+        color: white;
+        line-height: 30px;
+      }
+    }
+
+    .title_type {
+      display: inline-block;
+      color: white;
+      font-size: 1.5rem;
+      line-height: 30px;
+    }
+  }
+
+  // 中間
+  .cent_boxs {
+    display: inline-block;
+    width: 100%;
+    margin-top: 45px;
+
+    &.haveSpace {
+      padding: 20px;
+    }
+
+    &.NoMarginTop {
+      margin-top: 0;
+    }
+
+    .titlePic_boxs {
+      display: inline-block;
+      width: 100%;
+      margin-bottom: 20px; 
+
+      .teamPic {
+        display: inline-block;
+        width: 100%;
+        max-width: 80px;
+        margin-top: 20px;
+      }
+    }
+
+    .menuBtn_boxs {
+      display: inline-block;
+      width: 100%;
+      @include border-radius(5px);
+      overflow: hidden;
+
+      > a, button {
+        display: inline-block;
+        cursor: pointer;
+        width: 100%;
+        background-color: $blue;
+        font-size: 1.3rem;
+        color: white;
+        text-decoration: none;
+        padding: 10px;
+        border-bottom: 1px solid white;
+
+        &:last-child {
+          border-bottom: 0;
+        }
+      }
+    }
+
+    .inputBoxs {
+      display: inline-block;
+      width: 100%;
+    }
+
+    .listItemBox {
+      display: inline-block;
+      width: 100%;
+      height: 60px;
+      border-top: 1px solid rgba(226, 226, 226, 1.00);
+      padding: 10px 20px;
+      @include clearfix();
+      
+      &:last-child {
+        border-bottom: 1px solid rgba(226, 226, 226, 1.00);
+      }
+
+      .listItemLeft {
+        display: inline-block;
+        width: 70%;
+        float: left;
+        @include clearfix();
+      }
+
+      .listItemRight {
+        display: inline-block;
+        width: 30%;
+        float: right;
+      }
+    }
+  }
+
+  // 6小格選單
+  .DownMneu_boxs {
+    display: inline-block;
+    width: 100%;
+    height: 40px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+
+    > a {
+      display: inline-block;
+      cursor: pointer;
+      width: calc(100% / 6);
+      text-decoration: none;
+      color: $lightgray;
+      font-size: 1.3rem;
+      float: left;
+      line-height: 40px;
+      @include transition(all .3s);
+
+      &:hover, &:active, &.raHover {
+        color: $Dellblue;
+        border-top: 3px solid $Dellblue;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

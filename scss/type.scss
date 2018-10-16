@@ -1,0 +1,109 @@
+@import "_oa";
+
+$Dellblue: rgba(0, 81, 162, 1.00);
+$gray: rgba(91, 91, 91, 1.00);
+$blue:rgba(0, 150, 230, 1.00);
+$Dellorange: rgba(232, 86, 3, 1.00);
+
+p {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+span {
+  display: inline-block;
+  text-align: left;
+}
+
+
+.pTitle {
+  width: 100%;
+  font-size: 2rem;
+  font-weight: 600;
+  color: $Dellblue;
+  padding-bottom: 20px;
+
+  &.pNoSpace {
+    padding-bottom: 0;
+  }
+}
+
+.subTitle {
+  width: 100%;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: black;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  &.picTitle {
+    text-align: center !important;
+    color: $Dellblue;
+  }
+}
+
+.grayText {
+  width: 100%;
+  font-size: 1rem;
+  color: $gray;
+
+  &.gHaveSpace {
+    padding: 20px 0;
+  }
+}
+
+.centText {
+  width: 100%;
+  font-size: 1.1rem;
+  color: black;
+  text-align: justify;
+  text-justify:inter-ideograph;
+}
+
+.blackText {
+  font-size: 1.3rem;
+  color: black;
+  float: left;
+  margin-left: 10px;
+  line-height: 40px;
+}
+
+.list_boxs {
+  display: inline-block;
+  width: 100%;
+  @include clearfix();
+  text-align: left;
+  margin-bottom: 10px;
+
+  .listNum, .listText {
+    display: inline-block;
+    font-size: 1rem;
+    float: left;
+    color: $gray;
+  }
+
+  .listNum {
+    width: 20px;
+    margin-right: 5px;
+  }
+
+  .listText {
+    width: calc(100% - 20px - 5px);
+    margin-top: -3px;
+    text-align: justify;
+    text-justify:inter-ideograph;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+

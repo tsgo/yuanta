@@ -1,0 +1,91 @@
+@import "_oa";
+
+$Dellblue: rgba(0, 81, 162, 1.00);
+$gray: rgba(91, 91, 91, 1.00);
+$blue:rgba(0, 150, 230, 1.00);
+$Dellorange: rgba(232, 86, 3, 1.00);
+
+
+input {
+  display: inline-block;
+  outline: 0;
+  border: 0;
+  @include border-radius(3px);
+}
+
+button {
+  display: inline-block;
+  cursor: pointer;
+  outline: 0;
+  border: 0;
+  @include border-radius(5px);
+}
+
+a {
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.w100input {
+  width: 100%;
+  background-color: rgba(243, 243, 243, 1.00);
+  padding: 10px;
+  font-size: 1rem;
+  margin-bottom: 10px;
+
+  @include input-placeholder {
+    color: rgba(39, 40, 34, .3);
+  }
+}
+
+
+.TwoBtn {
+  width: calc(50% - 5px * 2 / 1);
+  font-size: 1.3rem;
+  float: left;
+  background-color: rgba(243, 243, 243, 1.00);
+  padding: 10px 0;
+  margin-right: 5px;
+  border: 1px solid rgba(226, 226, 226, 1.00);
+  
+  &:last-child {
+    float: right;
+    margin-left: 5px;
+    margin-right: 0;
+  }
+
+  &:hover, &:active {
+    background-color: $blue;
+    border: 1px solid $blue;
+    color: white;
+  }
+}
+
+
+.more {
+  width: 100%;
+  border: 1px solid $Dellorange;
+  color: $Dellorange;
+  font-size: 1.3rem;
+  @include border-radius(3px);
+  padding: 5px;
+}
+
+
+.control {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  float: left;
+  border: 2px solid $Dellblue;
+}
+
+
+
+
+
+
+
+
+
