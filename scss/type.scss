@@ -24,6 +24,8 @@ span {
   font-weight: 600;
   color: $Dellblue;
   padding-bottom: 20px;
+  text-align: justify;
+  text-justify:inter-ideograph;
 
   &.pNoSpace {
     padding-bottom: 0;
@@ -52,6 +54,16 @@ span {
   &.gHaveSpace {
     padding: 20px 0;
   }
+
+  &.gHaveSpaceTop {
+    padding-top: 20px;
+    padding-bottom: 10px;
+  }
+
+  &.gHaveSpaceDo {
+    padding-top: 10px;
+    padding-bottom: 20px;
+  }
 }
 
 .centText {
@@ -60,6 +72,10 @@ span {
   color: black;
   text-align: justify;
   text-justify:inter-ideograph;
+
+  &.centHaveSpace {
+    padding-bottom: 20px;
+  }
 }
 
 .blackText {

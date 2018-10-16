@@ -27,6 +27,21 @@ a {
   text-decoration: none;
 }
 
+textarea {
+  display: inline-block;
+  width: 100%;
+  background-color: rgba(243, 243, 243, 1.00);
+  @include border-radius(3px);
+  font-size: 1rem;
+  outline: 0;
+  border: 0;
+  padding: 10px;
+
+  @include input-placeholder {
+    color: rgba(39, 40, 34, .3);
+  }
+}
+
 .w100input {
   width: 100%;
   background-color: rgba(243, 243, 243, 1.00);
