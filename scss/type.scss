@@ -83,6 +83,24 @@ i {
   }
 }
 
+.itemN40, .itemN60 {
+  display: inline-block;
+  float: left;
+  font-size: 1.1rem;
+  color: black;
+  line-height: 40px;
+}
+
+.itemN40 {
+  width: 40%;
+  font-weight: 600;
+}
+
+.itemN60 {
+  width: 60%;
+}
+
+
 .blackText {
   font-size: 1.3rem;
   color: black;
@@ -100,6 +118,11 @@ i {
     margin-left: 0;
   }
 
+  &.blackNoSpace12 {
+    font-size: 1.2rem;
+    margin-left: 0;
+  }
+
   &.blackTable {
     text-align: center;
     float: none;
@@ -113,6 +136,11 @@ i {
     float: none;
     margin-left: 0;
     font-size: 1rem;
+  }
+
+  i {
+    font-style: normal;
+    color: $Dellblue;
   }
 }
 
@@ -145,6 +173,29 @@ i {
 
 .centOrange {
   color: $Dellorange;
+}
+
+.topBtn {
+  display: inline-block;
+  width: 100%;
+  @include border-radius(3px);
+  border: 1px solid $Dellblue;
+  @include clearfix();
+
+  a {
+    display: inline-block;
+    width: 50%;
+    padding: 5px;
+    float: left;
+    color: $Dellblue;
+    text-decoration: none;
+    cursor: pointer;
+
+    &:hover, &:active, &.topBtnOK {
+      background-color: $Dellblue;
+      color: white;
+    }
+  }
 }
 
 

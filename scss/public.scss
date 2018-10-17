@@ -114,6 +114,10 @@ $lightgray: rgba(184, 184, 184, 1.00);
       }
     }
 
+    &.centwhite {
+      background-color: white;
+    }
+
     &.haveSpace {
       padding: 20px;
     }
@@ -132,6 +136,49 @@ $lightgray: rgba(184, 184, 184, 1.00);
         width: 100%;
         max-width: 80px;
         margin-top: 20px;
+      }
+
+      .blueBoxs {
+        display: inline-block;
+        width: 100%;
+        background-color: $Dellblue;
+        padding: 10px 0;
+        @include clearfix();
+
+        &.whiteBoxs {
+          background-color: white;
+          border-top: 1px solid rgba(222, 222, 222, 1.00);
+        }
+        
+        > div {
+          display: inline-block;
+          width: calc(100% / 3);
+          color: white;
+          font-size: 1rem;
+          float: left;
+
+          &:first-child {
+            text-align: left;
+            padding-left: 20px;
+          }
+
+          &.backL {
+            color: black;
+            
+            &:first-child {
+              text-align: left;
+              padding-left: 20px;
+            }
+          }
+
+          a {
+            display: inline-block;
+            text-decoration: none;
+            cursor: pointer;
+            font-size: 1.3rem;
+            color: $Dellorange;
+          }
+        }
       }
     }
 
@@ -182,7 +229,7 @@ $lightgray: rgba(184, 184, 184, 1.00);
       background-color: white;
       padding: 10px 20px;
       @include clearfix();
-      
+
       &:last-child {
         border-bottom: 1px solid rgba(226, 226, 226, 1.00);
       }
@@ -218,6 +265,11 @@ $lightgray: rgba(184, 184, 184, 1.00);
           height: 40px;
           border: 1px solid rgba(255, 0, 0, .3);
         }
+
+        .listArrow {
+          float: right !important;
+          line-height: 40px;
+        }
       }
 
       .tableBox3 {
@@ -242,6 +294,33 @@ $lightgray: rgba(184, 184, 184, 1.00);
         &:first-child {
           text-align: left;
         }  
+      }
+    }
+
+    .listAllBrand {
+      display: inline-block;
+      width: 100%;
+      padding: 10px 20px;
+      @include clearfix();
+      border-top: 1px solid rgba(226, 226, 226, 1.00);
+
+      > a {
+        display: inline-block;
+        width: calc(100% / 3 - 5px * 2 / 3);
+        @include border-radius(3px);
+        background-color: rgba(243, 243, 243, 1.00);
+        padding: 10px;
+        color: black;
+        font-size: 1.2rem;
+        text-decoration: none;
+        cursor: pointer;
+        float: left;
+        margin-bottom: 5px;
+
+        &:nth-child(3n+2) {
+          margin-left: 5px;
+          margin-right: 5px;
+        }
       }
     }
 
