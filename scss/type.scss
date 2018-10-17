@@ -17,6 +17,11 @@ span {
   text-align: left;
 }
 
+i {
+  display: inline-block;
+  font-style: normal;
+}
+
 
 .pTitle {
   width: 100%;
@@ -84,6 +89,31 @@ span {
   float: left;
   margin-left: 10px;
   line-height: 40px;
+
+  &.blackTextCent {
+    text-align: center;
+    float: none;
+  }
+
+  &.blackNoSpace {
+    font-size: 1rem;
+    margin-left: 0;
+  }
+
+  &.blackTable {
+    text-align: center;
+    float: none;
+    margin-left: 0;
+    font-size: 1rem;
+  }
+
+  &.blackTableB {
+    text-align: center;
+    font-weight: 600;
+    float: none;
+    margin-left: 0;
+    font-size: 1rem;
+  }
 }
 
 .list_boxs {
@@ -113,6 +143,9 @@ span {
   }
 }
 
+.centOrange {
+  color: $Dellorange;
+}
 
 
 
