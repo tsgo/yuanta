@@ -133,6 +133,64 @@ textarea {
 }
 
 
+.tableCentBtn {
+  width: 100%;
+  padding: 10px;
+  border-bottom: 1px solid rgba(241, 241, 241, 1.00);
+  @include clearfix();
+  
+  button {
+    display: inline-block;
+    width: calc(100% / 3);
+    float: left;
+    color: $Dellorange;
+    background-color: transparent;
+    font-size: 1rem;
+    outline: 0;
+    border: 0;
+
+    &:nth-child(1) {
+      &:before {
+        display: inline-block;
+        content: '\f25a';
+        font-family: 'icomoon';
+        margin-top: 3px;
+        margin-right: 3px;
+      }
+
+      &.ordericon {
+        &:before {
+          display: inline-block;
+          content: '\e900';
+          font-family: 'icomoon';
+          margin-top: 3px;
+          margin-right: 3px;
+        }
+      }
+    }
+
+    &:nth-child(2) {
+      &:before {
+        display: inline-block;
+        content: '\e906';
+        font-family: 'icomoon';
+        margin-top: 3px;
+        margin-right: 3px;
+      }
+    }
+
+    &:nth-child(3) {
+      &:before {
+        display: inline-block;
+        content: '\e908';
+        font-family: 'icomoon';
+        margin-top: 3px;
+        margin-right: 3px;
+      }
+    }
+  }
+}
+
 
 
 

@@ -430,10 +430,13 @@ $lightgray: rgba(184, 184, 184, 1.00);
   width: 100%;
   background-color: white;
   @include border-radius(5px);
-  border: 1px solid rgba(231, 231, 231, 1.00);
+  border: 1px solid rgba(191, 195, 201, 1.00);
   @include clearfix();
   overflow: hidden;
   margin-bottom: 20px;
+
+    &.seBlue {background-color: rgba(219, 243, 255, 1.00);}
+    &.seorange {background-color: rgba(255, 246, 218, 1.00);}
 }
 
 

@@ -97,7 +97,7 @@ i {
   padding: 10px;
   color: black;
   font-size: 1.2rem;
-  border-bottom: 1px solid rgba(241, 241, 241, 1.00);
+  border-bottom: 1px solid rgba(191, 195, 201, 1.00);
 }
 
 .tableCent {
@@ -106,24 +106,35 @@ i {
   padding: 10px;
   color: black;
   font-size: 1rem;
-  border-bottom: 1px solid rgba(241, 241, 241, 1.00);
+  border-bottom: 1px solid rgba(191, 195, 201, 1.00);
+
+  &.tB {
+    color: $Dellblue;
+  }
+
+  &:last-child {
+    border-bottom: 0;
+  }
 
   &:before {
     display: inline-block;
     width: 50%;
     content: attr(title);
+    color: black
   }
 
   &:after {
     display: inline-block;
     width: 1px;
     content: '';
-    background-color: rgba(241, 241, 241, 1.00);
+    background-color: rgba(191, 195, 201, 1.00);
     height: 43px;
     position: absolute;
     left: 45%;
     top: 0;
   }
+
+  
 }
 
 .pTitle {
@@ -280,6 +291,18 @@ i {
         margin-right: 10px;
       }
     }
+
+    &.igreen {
+      color: green;
+
+      &:before {
+        display: inline-block;
+        content: '\f0d8';
+        font-family: 'icomoon';
+        font-size: 2rem;
+        margin-right: 10px;
+      }
+    }
   }
 }
 
@@ -321,12 +344,46 @@ i {
   border: 1px solid $Dellblue;
   @include clearfix();
 
+  &.otherA {
+    border: 0;
+    color: $lightgray;
+
+    &:first-child {
+      &:after {
+        display: inline-block;
+        position: absolute;
+        content: '';
+        width: 1px;
+        height: 30px;
+        background-color: #b8b8b8;
+        top: 65px;
+        left: 50%;
+      }
+    }
+
+    a {
+      font-size: 1.2rem;
+      padding: 0;
+      color: $gray;
+
+      &:hover, &:active, &.otherAB {
+        background-color: transparent;
+        color: $Dellblue;
+      }
+
+      &.otherAO {
+        background-color: transparent;
+        color: $Dellorange;
+      }
+    }
+  }
+
   &.top30 {
     width: calc(100% - 30%);
     margin-top: 5px;
     border: 1px solid white;
     overflow: hidden;
-    
+
     a {
       padding: 3px;
       background-color: white;
@@ -352,6 +409,10 @@ i {
     &:hover, &:active, &.topBtnOK {
       background-color: $Dellblue;
       color: white;
+    }
+
+    &.topBtnOKG {
+      background-color: green;
     }
   }
 }
