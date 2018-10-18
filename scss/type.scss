@@ -4,6 +4,7 @@ $Dellblue: rgba(0, 81, 162, 1.00);
 $gray: rgba(91, 91, 91, 1.00);
 $blue:rgba(0, 150, 230, 1.00);
 $Dellorange: rgba(232, 86, 3, 1.00);
+$lightgray: rgba(184, 184, 184, 1.00);
 
 p {
   display: inline-block;
@@ -22,6 +23,108 @@ i {
   font-style: normal;
 }
 
+.pptype {
+  display: inline-block;
+  width: 100%;
+  content: $gray;
+  font-size: 1.2rem;
+
+  &:before {
+    display: inline-block;
+    content: attr(title);
+  }
+
+  &:after {
+    display: inline-block;
+    content: '元';
+  }
+}
+
+
+.greenTitle {
+  float: left;
+  font-size: 1.2rem;
+  color: green;
+  font-weight: 600;
+
+  &.redTitle {
+    color: red;
+  }
+}
+
+.openClose {
+  display: inline-block;
+  cursor: pointer;
+  float: right;
+  background-color: white;
+  @include border-radius(3px);
+  color: $lightgray;
+  font-size: 1rem;
+  padding: 3px 5px;
+
+  &:before {
+    display: inline-block;
+    content: '\e903';
+    font-family: "icomoon";
+    color: $lightgray;
+    line-height: 25px;
+    margin-right: 3px;
+  }
+}
+
+.closeOpen {
+  display: inline-block;
+  cursor: pointer;
+  float: right;
+  background-color: white;
+  @include border-radius(3px);
+  color: $lightgray;
+  font-size: 1rem;
+  padding: 3px 5px;
+
+  &:before {
+    display: inline-block;
+    content: '\e902';
+    font-family: "icomoon";
+    color: $lightgray;
+    line-height: 25px;
+    margin-right: 3px;
+  }
+}
+
+.tableTextName {
+  width: 100%;
+  padding: 10px;
+  color: black;
+  font-size: 1.2rem;
+  border-bottom: 1px solid rgba(241, 241, 241, 1.00);
+}
+
+.tableCent {
+  width: 100%;
+  position: relative;
+  padding: 10px;
+  color: black;
+  font-size: 1rem;
+  border-bottom: 1px solid rgba(241, 241, 241, 1.00);
+
+  &:before {
+    display: inline-block;
+    width: 50%;
+    content: attr(title);
+  }
+
+  &:after {
+    display: inline-block;
+    width: 1px;
+    content: '';
+    background-color: rgba(241, 241, 241, 1.00);
+    height: 43px;
+    position: absolute;
+    left: 45%;
+    top: 0;
+  }
+}
 
 .pTitle {
   width: 100%;
@@ -108,9 +211,33 @@ i {
   margin-left: 10px;
   line-height: 40px;
 
+  &.blackRight {
+    float: right;
+  }
+
+  &.black30 {
+    width: 30%;
+  }
+
+  &.redTextCent {
+    color: red;
+    text-align: center;
+    float: none;
+  }
+
+  &.greenTextCent {
+    color: green;
+    text-align: center;
+    float: none;
+  }
+
   &.blackTextCent {
     text-align: center;
     float: none;
+  }
+
+  &.blackNline {
+    line-height: 25px;
   }
 
   &.blackNoSpace {
@@ -141,6 +268,18 @@ i {
   i {
     font-style: normal;
     color: $Dellblue;
+
+    &.ired {
+      color: red;
+
+      &:before {
+        display: inline-block;
+        content: '\f0d8';
+        font-family: 'icomoon';
+        font-size: 2rem;
+        margin-right: 10px;
+      }
+    }
   }
 }
 
@@ -181,6 +320,25 @@ i {
   @include border-radius(3px);
   border: 1px solid $Dellblue;
   @include clearfix();
+
+  &.top30 {
+    width: calc(100% - 30%);
+    margin-top: 5px;
+    border: 1px solid white;
+    overflow: hidden;
+    
+    a {
+      padding: 3px;
+      background-color: white;
+      border: 0;
+      color: $lightgray;
+
+      &:hover, &:active, &.topBtnOK {
+        background-color: red;
+        color: white;
+      }
+    }
+  }
 
   a {
     display: inline-block;

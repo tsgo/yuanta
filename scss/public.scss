@@ -50,6 +50,14 @@ $lightgray: rgba(184, 184, 184, 1.00);
   width: 100%;
   min-height: 100%;
 
+  &.centblue {
+    background-color: rgba(219, 243, 255, 1.00);
+  }
+
+  &.centorange {
+    background-color: rgba(255, 246, 218, 1.00);
+  }
+
   // 上方header
   header {
     display: inline-block;
@@ -61,6 +69,7 @@ $lightgray: rgba(184, 184, 184, 1.00);
     top: 0;
     @include background-image(linear-gradient(left, rgba(0,55,144,1), rgba(0,150,229,1)));  
     @include clearfix();
+    z-index: 9999;
     
     .nav_boxs {
       display: inline-block;
@@ -208,6 +217,7 @@ $lightgray: rgba(184, 184, 184, 1.00);
     .inputBoxs {
       display: inline-block;
       width: 100%;
+      @include clearfix();
 
       .RuleBox {
         display: inline-block;
@@ -377,6 +387,12 @@ $lightgray: rgba(184, 184, 184, 1.00);
         }
       }
     }
+
+    .seIteamAll {
+      display: inline-block;
+      width: 100%;
+      margin-top: 15px;
+    }
   }
 
   // 6小格選單
@@ -409,10 +425,42 @@ $lightgray: rgba(184, 184, 184, 1.00);
   }
 }
 
+.cardBoxs {
+  display: inline-block;
+  width: 100%;
+  background-color: white;
+  @include border-radius(5px);
+  border: 1px solid rgba(231, 231, 231, 1.00);
+  @include clearfix();
+  overflow: hidden;
+  margin-bottom: 20px;
+}
 
 
+.borderBoxs {
+  display: inline-block;
+  width: 100%;
+  padding: 10px 20px;
+  border-bottom: 1px solid rgba(204, 214, 222, 1.00);
+  @include clearfix();
 
+  &.borderNoSpace {
+    padding: 0 20px;
+  }
 
+  .borderB2, .borderB4 {
+    display: inline-block;
+    float: left;
+  }
+
+  .borderB2 {
+    width: calc(100% / 2);
+  }
+
+  .borderB4 {
+    width: calc(100% / 4);
+  }
+}
 
 
 
