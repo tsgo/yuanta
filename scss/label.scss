@@ -138,6 +138,10 @@ textarea {
   padding: 10px;
   border-bottom: 1px solid rgba(241, 241, 241, 1.00);
   @include clearfix();
+
+  &:last-child {
+    border-bottom: 0;
+  }
   
   button {
     display: inline-block;

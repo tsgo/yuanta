@@ -5,6 +5,7 @@ $gray: rgba(91, 91, 91, 1.00);
 $blue:rgba(0, 150, 230, 1.00);
 $Dellorange: rgba(232, 86, 3, 1.00);
 $lightgray: rgba(184, 184, 184, 1.00);
+$linecolor: rgba(191, 195, 201, .5);
 
 p {
   display: inline-block;
@@ -44,11 +45,13 @@ i {
 .greenTitle {
   float: left;
   font-size: 1.2rem;
-  color: green;
+  // color: green;
+  color: $Dellblue;
   font-weight: 600;
 
   &.redTitle {
-    color: red;
+    // color: red;
+    color: $Dellblue;
   }
 }
 
@@ -97,7 +100,11 @@ i {
   padding: 10px;
   color: black;
   font-size: 1.2rem;
-  border-bottom: 1px solid rgba(191, 195, 201, 1.00);
+  border-bottom: 1px solid $linecolor;
+
+  &.w01 {
+    border-bottom: 1px solid white;
+  }
 }
 
 .tableCent {
@@ -106,10 +113,22 @@ i {
   padding: 10px;
   color: black;
   font-size: 1rem;
-  border-bottom: 1px solid rgba(191, 195, 201, 1.00);
+  border-bottom: 1px solid $linecolor;
+
+  &.w01 {
+    border-bottom: 1px solid white;
+
+    &:after {
+      background-color: white;
+    }
+  }
 
   &.tB {
     color: $Dellblue;
+  }
+
+  &.tR {
+    color: red;
   }
 
   &:last-child {
@@ -127,7 +146,7 @@ i {
     display: inline-block;
     width: 1px;
     content: '';
-    background-color: rgba(191, 195, 201, 1.00);
+    background-color: $linecolor;
     height: 43px;
     position: absolute;
     left: 45%;
@@ -159,7 +178,12 @@ i {
   padding-top: 10px;
   padding-bottom: 10px;
 
+  &.subB {
+    color: $Dellblue;
+  }
+
   &.picTitle {
+    margin: 30px 0;
     text-align: center !important;
     color: $Dellblue;
   }
@@ -493,6 +517,38 @@ i {
     &.topBtnOKG {
       background-color: green;
     }
+  }
+}
+
+.secnav02 {
+  display: inline-block;
+  width: calc(100% / 2);
+  padding: 10px 0;
+  float: left;
+  border-right: 1px solid rgba(192, 192, 192, 1.00);
+  border-bottom: 1px solid rgba(192, 192, 192, .5);
+  background-color: white;
+  font-size: 1.2rem;
+  color: $gray;
+  cursor: pointer;
+
+  &.secnav03 {
+    width: calc(100% / 3);
+  }
+
+  &:last-child {
+    border-right: 0;
+  }
+
+  &.secnavB {
+    color: $Dellblue;
+    font-weight: 600;
+    background-color: rgba(194, 226, 255, 1.00);
+  }
+  &.secnavO {
+    color: $Dellorange;
+    font-weight: 600;
+    background-color: rgba(255, 241, 232, 1.00);
   }
 }
 

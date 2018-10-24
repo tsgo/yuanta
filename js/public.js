@@ -42,6 +42,6 @@ $(function () {
     scrollUnlock();
   });
  
-  $(".teachPic").imgLiquid ();
+  $(".teachPic, .icon_box").imgLiquid ();
 
 });
