@@ -108,12 +108,15 @@ textarea {
 }
 
 
-.control {
-  display: inline-block;
-  width: 35px;
-  height: 35px;
-  float: left;
-  border: 2px solid $Dellblue;
+.checkbox {
+  // display: inline-block;
+  // width: 35px;
+  // height: 35px;
+  // float: left;
+  // border: 2px solid $Dellblue;
+
+  @include checkbox;
+
 }
 
 

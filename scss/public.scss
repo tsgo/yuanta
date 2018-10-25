@@ -370,7 +370,7 @@ $linecolor: rgba(191, 195, 201, .5);
 
       .listItemLeft {
         display: inline-block;
-        width: 70%;
+        width: 60%;
         float: left;
         @include clearfix();
 
@@ -381,7 +381,7 @@ $linecolor: rgba(191, 195, 201, .5);
 
       .listItemRight {
         display: inline-block;
-        width: 30%;
+        width: 40%;
         float: right;
         @include clearfix();
         
@@ -389,10 +389,23 @@ $linecolor: rgba(191, 195, 201, .5);
           display: inline-block;
           width: calc(100% / 3);
           float: left;
+          cursor: pointer;
 
-          // d
-          height: 40px;
-          border: 1px solid rgba(255, 0, 0, .3);
+          &.icon-cog, &.icon-trash-2 {
+            display: inline-block;
+            font-size: 1.6rem;
+            color: rgba(192, 192, 192, 1.00);
+            line-height: 40px;
+            // margin: 0 3px;
+
+            &:hover, &:active, &.seok {
+              color: $Dellorange;
+            }
+          }
+
+          .switch {
+            @include switch($Dellorange);
+          }
         }
 
         .listArrow {

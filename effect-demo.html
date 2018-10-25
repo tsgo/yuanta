@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="tw">
+  <head>
+    <meta http-equiv="Content-Language" content="zh-tw" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+
+    <title>元大正權</title>
+
+    <link href="css/public.css" rel="stylesheet" type="text/css" />
+    <link href="css/icon.css" rel="stylesheet" type="text/css" />
+    <link href="css/type.css" rel="stylesheet" type="text/css" />
+    <link href="css/label.css" rel="stylesheet" type="text/css" />
+
+    <script src="js/jquery_v1.10.2/jquery-1.10.2.min.js" language="javascript" type="text/javascript" ></script>
+    <!-- <script src="js/public.js" language="javascript" type="text/javascript" ></script> -->
+    
+    <!-- UIComponent modules begin -->
+    <!-- required jQuery plugIns --><script language="javascript" type="text/javascript" src="js/jquery_animate_css/jquery.animateCSS.js"></script>
+	<!-- optional CSS styles for form in UIComponent --><link rel="stylesheet" href="css/ddk_plugins/uicomponent_form.merge.css" />
+    <!-- modules core CSS --><link rel="stylesheet" href="css/ddk_plugins/uicomponent.merge.css" />
+    <!-- modules core JS --><script language="javascript" type="text/javascript" src="js/ddk_plugins/ddk.uicomponent.js"></script>
+    <!-- UIComponent modules end -->
+    
+    <!-- 文件用CSS begin -->
+    <style type="text/css">
+	<!--
+	.main .cent_boxs .listItemBox{
+		height:auto;
+		min-height:60px;
+	}
+	.main .code{
+		padding:5px 10px;
+		text-align:left;
+		background-color:#FFC;
+		color:#333;
+	}
+	.main .code pre code{
+		white-space:pre-wrap;
+		font-size:0.8rem;
+		font-family: Arial, Helvetica, sans-serif, Microsoft YaHei, Microsoft JhengHei;
+		line-height:1.25;
+	}
+	.main .cent_boxs ol,
+	.main .cent_boxs ul{
+		width:100%;
+		display:block;
+		margin:0;
+		padding:0;
+		padding-left:2em;
+	}
+	.main .cent_boxs li{
+		width:inherit;
+		text-align:left;
+		margin-bottom:0.5em;
+		white-space:normal;
+	}
+	-->
+    </style>
+    <!-- 文件用CSS end -->
+  </head>
+
+  <body lang="zh-tw">
+<!-- 偷藏的表單用樣式 begin -->
+<style type="text/css">
+<!--
+.ok{
+	border:#060 solid 1px;
+}
+.ok table{
+	border-collapse:separate;
+	border-spacing:3px 10px;
+}
+.ok table th , 
+.ok table td{
+	padding:5px;
+	border:#CCC solid 1px;
+}
+.ok th{
+	color:#060;
+	font-size:1rem;
+}
+
+
+.ok label{
+	position:relative;
+	display:inline-block;
+	padding:5px 25px;
+}
+.ok input.datePicker{
+	border:#00C solid 1px;
+	padding:15px 25px;
+}
+.ok .ooo th,
+.ok .ooo td{
+	padding-top:20px;
+	vertical-align:bottom;
+}
+
+-->
+</style>
+<!-- 偷藏的表單用樣式 end -->
+
+<!-- 偷藏的表單驗證JS begin -->
+<script language="javascript" type="text/javascript">
+/**
+!檢查<select> 不是選取第0個<option>.
+>_item HTML Element/jQuery DOM Object|<select> 的參照,一次一個<select>.
+@回傳 Boolean|檢查出選取項目是第0個時回傳true.
+*/
+var isSelectNotZero = function(_item){
+	return $(_item).prop('selectedIndex') == 0;
+};
+/**
+!檢查<input type="radio"> 有無選取.
+>item_ary HTML Element/jQuery DOM Object|name 屬性相同<input type="radio"> 的參照.
+@回傳 Boolean|檢查出未選取項目有發生時回傳true.
+*/
+var isRadioNotChecked = function(item_ary){
+	for(var i = 0;i<item_ary.length;i++){
+		if(item_ary[i].checked == true) return false;
+	}
+	return true;
+};
+/**
+!檢查<input type="checkbox"> 有無選取.
+>item_ary HTML Element/jQuery DOM Object|name 屬性相同<input type="checkbox"> 的參照.
+>minChecked Number|最少要選幾個,選擇性.
+>maxChecked Number|最多要選幾個,選擇性.
+@回傳 Boolean|判斷為不吻合選取條件時回傳true.
+*/
+var isCheckboxNotChecked = function(item_ary , minChecked , maxChecked){
+	var count = 0;
+	for(var i = 0;i<item_ary.length;i++){
+		if(item_ary[i].checked == true) count ++;
+	}
+	if(arguments.length == 3){
+		if(count >= minChecked && count <= maxChecked){
+			return false;
+		}
+	} else if(arguments.length == 2){
+		if(count >= minChecked){
+			return false;
+		}
+	}
+	return true;
+};
+/**
+!檢查type="radio" 與type="checkbox" 以外的<input> 或<textarea> , 一次可傳一個參照或多個.
+>item_ary HTML Element/jQuery DOM Object/Array|<input> 或<textarea> 的參照.
+@回傳 Number|item_ary 中未填寫的陣列索引值,若item_ary 內容都有填寫,回傳-1.
+*/
+var isTextFieldEmpty = function(item_ary){
+	for(var i = 0;i<item_ary.length;i++){
+		if($(item_ary[i]).val() == '') return i;
+	}
+	return -1;
+};
+</script>
+<!-- 偷藏的表單驗證JS end -->
+    <div class="main">
+      <header>
+        <div class='nav_boxs icon-menu'></div>
+        <div class='title_type'>畫面互動元件開發測試</div>
+      </header>
+
+      <div class='cent_boxs haveSpace'>
+        
+      <div class='cent_boxs NoMarginTop'>
+      	<br>
+      	<p>以下為範例畫面.</p>
+        <br>
+        <br>
+        <div class='listItemBox'>
+          <div class='listItemLeft'>
+            <p class='blackText'>W031-到價通知-新增股票權證.png</p>
+          </div>
+          <div class='listItemRight'>
+             <a href="javascript:;" class='more' onclick="
+ddkUIComponent('Small Prompt' , 
+{
+    action : 'appear',
+    replaced : false,
+    firstText : {text:'請輸入股票/權證的名稱或代碼'},
+    doneLabel : '確認',
+    deniedLabel : '取消',
+    formInstance:
+    '<div>' + 
+        '<div class=\'fieldHolder\'>' + 
+            '<input type=\'text\' placeholder=\'必填\' id=\'test\' name=\'test\' class=\'singleLineField\'>' + 
+            '<span class=\'note\'>必填項目</span>' + 
+        '</div>' + 
+    '</div>'
+    ,
+    afterDenied : function (){console.log('CLICK EVENT events.' + ' >> afterDenied');}
+    ,
+    afterDone : function(currentFormInstance){
+    	var _input = $(currentFormInstance).find('input[name=\'test\']');
+    	if(_input.val() == ''){
+        	_input.closest('.fieldHolder').find('span.note').addClass('actived');
+            return false;
+        } else {
+            ddkUIComponent('Simple Alert' , 
+                {
+                    action : 'appear' , 
+                    replaced : true, 
+                    firstText : {text:'完成'}
+                }
+            );
+       	}
+    }
+}
+);">操作</a>
+          </div>
+          <br class="clearFloat">
+        </div>
+
+        <div class='listItemBox'>
+          <div class='listItemLeft'>
+            <p class='blackText'>W030-到價通知-調整設定頁面.png</p>
+          </div>
+          <div class='listItemRight'>
+             <a href="javascript:;" class='more' onclick="
+ddkUIComponent('Huge Prompt' , 
+{
+    action : 'appear',
+    replaced : false,
+    firstText : {text:'到價設定'},
+    doneLabel : '儲存並確認',
+    deniedLabel : '取消',
+    formInstance:
+'<div class=\'ok\'>'+
+'<table width=\'100%\' border=\'0\' class=\'ooo\'>'+
+'<tr>'+
+'<th>0475645646</th>'+
+'<td>0.72</td>'+
+'</tr>'+
+'<tr>'+
+'<th>台積電元大840購133</th>'+
+'<td><span class=\'symbol goRaise\'>&#10151;</span><span class=\'symbol goReduce\'>&#10151;</span>1.1(1.955%)</td>'+
+'</tr>'+
+'</table>'+
+'<table width=\'100%\' border=\'0\'>'+
+'<tr>'+
+'<th>單選</th>'+
+'<td>'+
+'<div class=\'fieldHolder\'>'+
+'<label>項1<input type=\'radio\' id=\'r1\' name=\'r1\' value=\'eat\'></label>&nbsp;<label>項2<input type=\'radio\' id=\'r1\' name=\'r1\' value=\'sleep\'></label>'+
+'<span class=\'note\'>欄位必選</span>'+
+'</div>'+
+'</td>'+
+'</tr>'+
+'<tr>'+
+'<th>複選</th>'+
+'<td>'+
+'<div class=\'fieldHolder\'>'+
+'<label><input type=\'checkbox\' id=\'C1\' name=\'C1\' value=\'黑椒汁\'>項1</label>'+
+'<br>'+
+'<label><input type=\'checkbox\' id=\'C1\' name=\'C1\' value=\'紅酒蘑菇汁\'>項2</label>'+
+'<br>'+
+'<label><input type=\'checkbox\' id=\'C1\' name=\'C1\' value=\'燒汁\'>項3</label>'+
+'<br>'+
+'<label><input type=\'checkbox\' id=\'C1\' name=\'C1\' value=\'蒜茸汁\'>項4</label>'+
+'<br>'+
+'<label><input type=\'checkbox\' id=\'C1\' name=\'C1\' value=\'白汁\'>項5</label>'+
+'<br>'+
+'<label><input type=\'checkbox\' id=\'C1\' name=\'C1\' value=\'肉汁\'>項6</label>'+
+'<br>'+
+'<label><input type=\'checkbox\' id=\'C1\' name=\'C1\' value=\'青醬\'>項7</label>'+
+'<br>'+
+'<label><input type=\'checkbox\' id=\'C1\' name=\'C1\' value=\'咖哩\'>項8</label>'+
+'<br>'+
+'<label><input type=\'checkbox\' id=\'C1\' name=\'C1\' value=\'莎莎醬\'>項9</label>'+
+'<br>'+
+'<label><input type=\'checkbox\' id=\'C1\' name=\'C1\' value=\'鱷梨醬\'>項10</label>'+
+'<span class=\'note\'>至少選1個,最多選3個</span>'+
+'</div>'+
+'</td>'+
+'</tr>'+
+'<tr>'+
+'<th>文字</th>'+
+'<td>'+
+'<div class=\'fieldHolder\'>'+
+'<input type=\'text\' class=\'singleLineField\' id=\'a1\' name=\'a1\'><span class=\'note\'>必填項目</span>'+
+'</div>'+
+'</td>'+
+'</tr>'+
+'<tr>'+
+'<th>下拉</th>'+
+'<td>'+
+'<div class=\'fieldHolder\'>'+
+'<select id=\'s1\' name=\'s1\'>'+
+'<option value=\'\'>請選擇</option>'+
+'<option value=\'溫徹斯特1876型\'>項1</option>'+
+'<option value=\'溫徹斯特1886型\'>項2</option>'+
+'<option value=\'溫徹斯特1894型\'>項3</option>'+
+'<option value=\'溫徹斯特88型\'>項4</option>'+
+'<option value=\'溫徹斯特9422型\'>項5</option>'+
+'</select>'+
+'<span class=\'bullet icon-play_arrow forSelect\'></span>'+
+'<span class=\'note\'>必填項目</span>'+
+'</div>'+
+'</td>'+
+'</tr>'+
+'</table>'+
+'</div>'
+    ,
+    afterDenied : function (){
+        console.log('CLICK EVENT events.' + ' >> afterDenied');
+    }
+    ,
+    afterDone : function (currentFormInstance){
+        var _ary = $(currentFormInstance).find('.fieldHolder:has(span.note)');
+        var tmp , _obj;
+        var radio_r1_ary = $(currentFormInstance).find('.fieldHolder:has(span.note)').find('input[type=\'radio\'][name=\'r1\']');
+        
+        var checkbox_ary = $(currentFormInstance).find('.fieldHolder:has(span.note)').find('input[type=\'checkbox\']');
+        var select_ary = $(currentFormInstance).find('.fieldHolder:has(span.note)').find('select');
+        
+        var text_ary = $(currentFormInstance).find('.fieldHolder:has(span.note)').find('input[type=\'text\'] , input[type=\'date\']');
+        if(isRadioNotChecked(radio_r1_ary) == true){
+            $(radio_r1_ary[0]).closest('.fieldHolder').find('span.note').addClass('actived');
+            $(radio_r1_ary[0]).focus();
+            return false;//不讓UIComponent 消失,繼續完成表單
+        }
+        if(isCheckboxNotChecked(checkbox_ary , 1/*最少選一個*/ , 3/*最多選3個*/) == true){
+            $(checkbox_ary[0]).closest('.fieldHolder').find('span.note').addClass('actived');
+            $(checkbox_ary[0]).focus();
+            return false;//不讓UIComponent 消失,繼續完成表單
+        }
+        tmp = isTextFieldEmpty(text_ary);
+        if(tmp != -1){
+            $(text_ary[tmp]).closest('.fieldHolder').find('span.note').addClass('actived');
+            $(text_ary[tmp]).focus();
+            return false;//不讓UIComponent 消失,繼續完成表單
+        }
+        for(var i = 0;i < select_ary.length;i++){
+            _obj = select_ary[i];
+            if(isSelectNotZero(_obj) == true) {
+                $(_obj).closest('.fieldHolder').find('span.note').addClass('actived');
+                $(_obj).focus();
+                return false;//不讓UIComponent 消失,繼續完成表單
+            }
+        }
+        ddkUIComponent('Please Wait' , 
+        {
+            action : 'appear',
+            replaced : true,
+            firstText : {text:'模擬表單透過AJAX 處理'},
+            secondText : {text:'6秒後銜接下一個動作'},
+            events : {
+                beforeAppear : function (){console.log('EVENT events.' + ' >> beforeAppear');}
+                ,
+                afterAppear : function (){
+                    console.log('EVENT events.' + ' >> afterAppear');
+                    setTimeout(
+                        function(){
+                            ddkUIComponent('Simple Alert' , 
+                            {
+                                action : 'appear',
+                                replaced : true,
+                                firstText : {text:'謝謝惠顧'},
+                                secondText : {text:'表單中R1 的值 = ' + 
+                                $(currentFormInstance).find('.fieldHolder:has(span.note)').find('input[type=\'radio\'][name=\'r1\']:checked').val()
+                                 , style:'color:red;'},
+                                doneLabel : '表單完成',
+                                afterDone : function(){console.log('CLICK EVENT events.' + ' >> afterDone');}
+                            }
+                            );
+                        }
+                        ,
+                        6000
+                    );
+                }
+                ,
+                beforeRemove : function (){console.log('EVENT events.' + ' >> beforeRemove');}
+                ,
+                afterRemove : function (){console.log('EVENT events.' + ' >> afterRemove');}
+            }
+        }
+        );
+    }
+}
+);">操作</a>
+          </div>
+          <br class="clearFloat">
+          
+        </div>
+        <div class='listItemBox'>
+          <div class='listItemLeft'>
+            <p class='blackText'>簡單的提示</p>
+          </div>
+          <div class='listItemRight'>
+             <a href="javascript:;" class='more' onclick="
+ddkUIComponent('Simple Alert' , 
+{
+    action : 'appear',
+    replaced : false,
+    firstText : {text:'這是大標' , style:''},
+    secondText : {text:'這是小標' , style:''},
+    doneLabel : '這是可以顯示的文字',
+    afterDone : function(){console.log('CLICK EVENT events.' + ' >> afterDone');}
+    ,
+    events : {
+        beforeAppear : function (){console.log('EVENT events.' + ' >> beforeAppear');}
+        ,
+        afterAppear : function (){console.log('EVENT events.' + ' >> afterAppear');}
+        ,
+        beforeRemove : function (){console.log('EVENT events.' + ' >> beforeRemove');}
+        ,
+        afterRemove : function (){console.log('EVENT events.' + ' >> afterRemove');}
+    }
+}
+);
+">操作</a>
+          </div>
+          <br class="clearFloat">
+        </div>
+        
+        
+        
+        
+
+        <div class='listItemBox'>
+          <div class='listItemLeft'>
+            <p class='blackText'>簡單的確認</p>
+          </div>
+          <div class='listItemRight'>
+             <a href="javascript:;" class='more' onclick="
+ddkUIComponent('Simple Confirm' , 
+{
+    action : 'appear',
+    replaced : false,
+    firstText : {text:'按下&quot;開啟新視窗&quot;新開視窗'},
+    secondText : {text:'按下&quot;取消&quot;什麼都不會發生'},
+    doneLabel : '開啟新視窗',
+    deniedLabel : '取消',
+    afterDenied : function (){console.log('CLICK EVENT events.' + ' >> afterDenied');}
+    ,
+    afterDone : function(){var ok = window.open('http://udn.com' , '' , 'width=800,height=600');console.log('CLICK EVENT events.' + ' >> afterDone');}
+}
+);             
+">操作</a>
+          </div>
+          <br class="clearFloat">
+          
+        </div>
+
+        <div class='listItemBox'>
+          <div class='listItemLeft'>
+            <p class='blackText'>畫面/流程閒置中</p>
+          </div>
+          <div class='listItemRight'>
+             <a href="javascript:;" class='more' onclick="
+ddkUIComponent('Please Wait' , 
+{
+    action : 'appear',
+    replaced : false,
+    firstText : {text:'開啟後6秒後自動關閉'},
+    secondText : {text:'沒有任何按鈕'},
+    events : {
+        beforeAppear : function (){console.log('EVENT events.' + ' >> beforeAppear');}
+        ,
+        afterAppear : function (){
+        	console.log('EVENT events.' + ' >> afterAppear');
+            setTimeout(
+            	function(){
+                	ddkUIComponent('Please Wait'/*UIComponent Type 必須先得知是什麼*/ , {action : 'remove'}/*UIComponent Options 參數只要這樣就夠*/);
+                }
+                ,
+                6000
+            );
+        }
+        ,
+        beforeRemove : function (){console.log('EVENT events.' + ' >> beforeRemove');}
+        ,
+        afterRemove : function (){console.log('EVENT events.' + ' >> afterRemove');}
+    }
+}
+);">操作</a>
+          </div>
+          <br class="clearFloat">
+        </div>
+        
+      </div>
+      <div class='cent_boxs NoMarginTop haveSpace'>
+        <div class='inputBoxs'>
+          
+        </div>      
+      </div>
+      	<!-- UIComponent begin -->
+      	<div class="blackCover"><div class="colorCover"></div><div class="trueCover"></div><!-- 半透明黑色屏蔽 --></div><div class="UIComponent"><div class="mixAlert ui-flow-stopper xyCenterReady unActived"></div><div class="copy ui-alert"><article class="Alert xyCenter" data-ui-id=""><dl><dt><h3><span></span></h3><h4><span></span></h4></dt><dd class="contentWrapper"></dd><dd class="buttonWrapper count-1"><button type="button" class="doneBtn fullLandscape"><span>確定</span></button><br class="clearFloat"></dd></dl><button type="button" class="closeBtn"><span class="bullet icon-cross"></span><span>關閉</span></button></article></div><div class="copy ui-confirm"><article class="Alert Confirm xyCenter" data-ui-id=""><dl><dt><h3><span></span></h3><h4><span></span></h4></dt><dd class="contentWrapper"></dd><dd class="buttonWrapper count-2"><button type="button" class="doneBtn alignLeft"><span>確定</span></button><button type="button" class="deniedBtn alignRight"><span>取消</span></button><br class="clearFloat"></dd></dl></article></div><div class="copy ui-prompt-mini"><article class="Prompt Mini xyCenter" data-ui-id=""><dl><dt><h3><span></span></h3><h4><span></span></h4></dt><dd class="contentWrapper"></dd><dd class="buttonWrapper count-2"><button type="button" class="doneBtn alignLeft"><span>確定</span></button><button type="button" class="deniedBtn alignRight"><span>取消</span></button><br class="clearFloat"></dd></dl></article></div><div class="copy ui-prompt-huge"><article class="Prompt Grand xyCenter" data-ui-id=""><dl><dt><h3><span></span></h3><h4><span></span></h4></dt><dd class="contentWrapper"></dd><dd class="buttonWrapper count-2"><button type="button" class="doneBtn alignLeft"><span>確定</span></button><button type="button" class="deniedBtn alignRight"><span>取消</span></button><br class="clearFloat"></dd></dl></article></div><div class="copy ui-wait"><article class="Alert Wait xyCenter" data-ui-id=""><dl><dt><h3><span></span></h3><h4><span></span></h4></dt><dd><div class="animation blockSelfCenter"><span>等待</span></div></dd></dl><br class="clearFloat"></article></div></div>
+        <!-- UIComponent end -->
+    </div>
+  </body>
+
+</html>
