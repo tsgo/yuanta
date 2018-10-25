@@ -133,6 +133,12 @@ textarea {
   &.res {
     left: calc(50% - 65px);
   }
+
+  &.notBtn {
+    bottom: auto;
+    left: auto;
+    position: sticky;
+  }
 }
 
 
