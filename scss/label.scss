@@ -138,6 +138,7 @@ textarea {
     bottom: auto;
     left: auto;
     position: sticky;
+    margin-bottom: 80px;
   }
 }
 
@@ -199,6 +200,16 @@ textarea {
         font-family: 'icomoon';
         margin-top: 3px;
         margin-right: 3px;
+      }
+    }
+
+    &.payok {
+      width: 100%;
+
+      &:first-child {
+        &:before {
+          display: none;
+        }
       }
     }
   }
