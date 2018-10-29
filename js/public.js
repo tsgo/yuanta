@@ -20,25 +20,33 @@ $(function () {
     window.scrollTo(scrollPosition[0], scrollPosition[1]);
   }
 
+  $('#r_menu_boxs').each (function () {
+    var $that = $(this);
+    $that.find ('span').click (function () {
+      $(this).toggleClass ('s');
+    });
+    scrollLock();
+  });
+
   $('.icon-menu').click(function() {
     $('.main').addClass('nav_hover');
-    $('.nav_list').addClass('nav_open');
-    $('.nav_balck').addClass('b_open');
+    $('#r_menu_boxs').addClass('nav_open');
+    $('#menu_back ').addClass('b_open');
     scrollLock();
   });
 
 
-  $('.nav_balck').click(function() {
+  $('#menu_back').click(function() {
     $('.main').removeClass('nav_hover');
-    $('.nav_list').removeClass('nav_open');
-    $('.nav_balck').removeClass('b_open');
+    $('#r_menu_boxs').removeClass('nav_open');
+    $('#menu_back').removeClass('b_open');
     scrollUnlock();
   });
 
   $('.icon-close').click(function() {
     $('.main').removeClass('nav_hover');
-    $('.nav_list').removeClass('nav_open');
-    $('.nav_balck').removeClass('b_open');
+    $('#r_menu_boxs').removeClass('nav_open');
+    $('#menu_back').removeClass('b_open');
     scrollUnlock();
   });
  
