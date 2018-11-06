@@ -221,7 +221,7 @@ i {
   }
 }
 
-.itemN40, .itemN60 {
+.itemN40, .itemN60, .itemAll {
   display: inline-block;
   float: left;
   font-size: 1.1rem;
@@ -236,6 +236,17 @@ i {
 
 .itemN60 {
   width: 60%;
+}
+
+.itemAll {
+  margin: 20px 0 0 0;
+  
+  &:before {
+    display: inline-block;
+    content: attr(title);
+    font-size: 1.1rem;
+    color: black;
+  }
 }
 
 
@@ -373,6 +384,10 @@ i {
   border: 1px solid $Dellblue;
   @include clearfix();
 
+  &.topBtnO {
+    border: 1px solid $Dellorange;
+  }
+
   &.otherB {
     border: 0;
     color: $lightgray;
@@ -508,6 +523,15 @@ i {
     color: $Dellblue;
     text-decoration: none;
     cursor: pointer;
+
+    &.aoragne {
+      color: $Dellorange;
+
+      &:hover, &:active, &.topBtnOKO {
+        background-color: $Dellorange;
+        color: white;
+      }
+    }
 
     &:hover, &:active, &.topBtnOK {
       background-color: $Dellblue;
