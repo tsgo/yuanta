@@ -105,6 +105,10 @@ i {
   &.w01 {
     border-bottom: 1px solid white;
   }
+
+  &.g01 {
+    border-bottom: 1px solid rgba(187, 186, 191, 1.00);
+  }
 }
 
 .tableCent {
@@ -257,6 +261,14 @@ i {
   margin-left: 10px;
   line-height: 40px;
 
+  &.h45 {
+    line-height: 25px;
+  }
+
+  &.h60 {
+    line-height: 60px;
+  }
+
   &.blackRight {
     float: right;
   }
@@ -272,7 +284,7 @@ i {
   }
 
   &.greenTextCent {
-    color: green;
+    color: rgba(3, 200, 37, 1.00);
     text-align: center;
     float: none;
   }
@@ -308,6 +320,11 @@ i {
     font-weight: 600;
   }
 
+  &.blackTableRed {
+    color: red;
+    font-weight: 600;
+  }
+
   &.blackTableB {
     text-align: center;
     font-weight: 600;
@@ -333,7 +350,7 @@ i {
     }
 
     &.igreen {
-      color: green;
+      color: rgba(3, 200, 37, 1.00);
 
       &:before {
         display: inline-block;
@@ -370,6 +387,14 @@ i {
     margin-top: -3px;
     text-align: justify;
     text-justify:inter-ideograph;
+
+    i {
+      display: inline-block;
+      color: $Dellorange;
+      font-style: normal;
+      font-size: 1rem;
+      margin: 2px 3px 0 3px;
+    }
   }
 }
 
@@ -539,7 +564,8 @@ i {
     }
 
     &.topBtnOKG {
-      background-color: green;
+      color: white;
+      background-color: rgba(3, 200, 37, 1.00);
     }
   }
 }

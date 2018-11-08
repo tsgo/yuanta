@@ -52,4 +52,10 @@ $(function () {
  
   $(".teachPic, .icon_box, .navicon").imgLiquid ();
 
+  // $("").imgLiquid (position: '50%');
+
+  // $('.closeOpen').click(function() {
+  //   $('.seIteamAll').addClass('seshow');
+  // });
+
 });
