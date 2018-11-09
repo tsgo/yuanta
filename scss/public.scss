@@ -347,6 +347,7 @@ $linecolor: rgba(191, 195, 201, .5);
 
       > a, button {
         display: inline-block;
+        font-family: Roboto, RobotoDraft, Helvetica, Arial, sans-serif, "微軟正黑體", "Microsoft JhengHei";
         cursor: pointer;
         width: 100%;
         background-color: $blue;
@@ -648,9 +649,9 @@ $linecolor: rgba(191, 195, 201, .5);
     border: 1px solid rgba(187, 186, 191, 1.00);
   }
 
-  &:last-child {
-    margin-bottom: 100px;
-  }
+  // &:last-child {
+  //   margin-bottom: 100px;
+  // }
 }
 
 
