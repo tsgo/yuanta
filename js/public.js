@@ -24,7 +24,6 @@ $(function () {
     var $that = $(this);
     $that.find ('span').click (function () {
       $(this).toggleClass ('s');
-      scrollLock();
     });
   });
 
