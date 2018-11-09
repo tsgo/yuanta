@@ -238,6 +238,10 @@ textarea {
   background-color: rgba(244, 243, 243, 1.00);
   margin-top: 20px;
 
+  &.notopm {
+    margin-top: 0;
+  }
+
   .container-1 {
     display: inline-block;
     width: 100%;
@@ -258,19 +262,27 @@ textarea {
       color: $gray;
       font-weight: 600;
       background-color: transparent;
+
+      &::-webkit-search-cancel-button {
+        display: none;
+      }
     }
 
     .icon {
       display: inline-block;
       border: 0;
       outline: 0;
-      font-size: 13px;
-      color: $gray;
-      font-weight: 600;
+      width: 50px;
+      height: 40px;
+      line-height: 40px;
+      font-size: 1rem;
+      color: white;
+      // font-weight: 600;
       line-height: 20px;
       float: right;
-      background-color: transparent;
+      background-color: $Dellblue;
       cursor: pointer;
+      @include border-radius(0px 2px 2px 0px);
     }
   }
 }
