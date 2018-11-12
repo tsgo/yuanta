@@ -11,6 +11,7 @@ input {
   outline: 0;
   border: 0;
   @include border-radius(3px);
+  font-family: Roboto, RobotoDraft, Helvetica, Arial, sans-serif, "微軟正黑體", "Microsoft JhengHei";
 }
 
 button {
@@ -19,6 +20,7 @@ button {
   outline: 0;
   border: 0;
   @include border-radius(5px);
+  font-family: Roboto, RobotoDraft, Helvetica, Arial, sans-serif, "微軟正黑體", "Microsoft JhengHei";
 }
 
 a {
@@ -36,6 +38,7 @@ textarea {
   outline: 0;
   border: 0;
   padding: 10px;
+  font-family: Roboto, RobotoDraft, Helvetica, Arial, sans-serif, "微軟正黑體", "Microsoft JhengHei";
 
   @include input-placeholder {
     color: rgba(39, 40, 34, .3);
@@ -91,14 +94,16 @@ textarea {
 }
 
 
-.more {
+button, .more {
   width: 100%;
   border: 1px solid $Dellorange;
   color: $Dellorange;
   font-size: 1.3rem;
   @include border-radius(3px);
   padding: 5px;
-
+  background-color: white !important;
+  font-family: Roboto, RobotoDraft, Helvetica, Arial, sans-serif, "微軟正黑體", "Microsoft JhengHei";
+  
   &.smore {
     width: auto;
     font-size: 1rem;
@@ -262,6 +267,7 @@ textarea {
       color: $gray;
       font-weight: 600;
       background-color: transparent;
+      font-family: Roboto, RobotoDraft, Helvetica, Arial, sans-serif, "微軟正黑體", "Microsoft JhengHei";
 
       &::-webkit-search-cancel-button {
         display: none;
