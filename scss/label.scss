@@ -181,6 +181,30 @@ textarea {
     outline: 0;
     border: 0;
 
+    &.but2 {
+      width: calc(100% / 2);
+
+      &:nth-child(1) {
+        &:before {
+          display: inline-block;
+          content: '\e906';
+          font-family: 'icomoon';
+          margin-top: 3px;
+          margin-right: 3px;
+        }
+      }
+
+      &:nth-child(2) {
+        &:before {
+          display: inline-block;
+          content: '\e908';
+          font-family: 'icomoon';
+          margin-top: 3px;
+          margin-right: 3px;
+        }
+      }
+    }
+
     &:nth-child(1) {
       &:before {
         display: inline-block;
