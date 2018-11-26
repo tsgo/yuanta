@@ -519,7 +519,7 @@ $linecolor: rgba(191, 195, 201, .5);
       @include clearfix();
       border-top: 1px solid rgba(226, 226, 226, 1.00);
 
-      > a {
+      > a, button {
         display: inline-block;
         width: 50%;
         @include border-radius(3px);
@@ -532,6 +532,11 @@ $linecolor: rgba(191, 195, 201, .5);
         float: left;
         margin-bottom: 5px;
         text-align: left;
+        background-color: transparent !important;
+
+        &:hover, &:active {
+          background-color: transparent !important;
+        }
       }
     }
 
