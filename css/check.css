@@ -1,0 +1,78 @@
+
+
+/* The container */
+.listItemLeft .container {
+    /*display: block;*/
+    display: inline-block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    float: left;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.listItemLeft .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 35px;
+    width: 35px;
+    background-color: rgba(255, 255, 255, 1.00);
+    border: 2px solid rgba(72, 140, 238, 1.00);
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+}
+
+/* On mouse-over, add a grey background color */
+.listItemLeft .container:hover input ~ .checkmark {
+    background-color: rgba(255, 255, 255, 1.00);
+}
+
+/* When the checkbox is checked, add a blue background */
+.listItemLeft .container input:checked ~ .checkmark {
+    background-color: rgba(255, 255, 255, 1.00);
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.listItemLeft .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.listItemLeft .container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.listItemLeft .container .checkmark:after {
+    left: 10px;
+    top: 3px;
+    width: 10px;
+    height: 20px;
+    border: solid rgba(72, 140, 238, 1.00);
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+
+

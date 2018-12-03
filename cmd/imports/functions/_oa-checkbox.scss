@@ -5,10 +5,7 @@
  * @link        https://www.ioa.tw/
  */
 
-// <label>
-//   <input type='checkbox'>
-//   <span></span>
-// </label>
+
 @mixin checkbox($color: rgba(69, 139, 244, 1.00)){
   $w: 4px;
   position: relative;
@@ -140,3 +137,5 @@
   }
   @include keyframes(#{$x}) { 0% { @include rotate(0); } 100% { @include rotate(360deg); } }
 }
+
+

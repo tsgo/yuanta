@@ -261,6 +261,26 @@ i {
   margin-left: 10px;
   line-height: 40px;
 
+  &.teamText {
+
+    @include range-width(376px, 415px) {
+      width: 160px;
+    }
+
+    @include range-width(321px, 376px) {
+      width: 147px;
+    }
+      
+    @include range-width(0, 321px) {
+      width: 110px;
+    }
+
+    display: -webkit-box;
+    -webkit-box-orient: vertical; 
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+  }
+
   &.h45 {
     line-height: 25px;
   }
