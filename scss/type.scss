@@ -37,7 +37,9 @@ i {
 
   &:after {
     display: inline-block;
-    content: '元';
+    content: '張';
+    margin-left: 5px;
+    font-size: 1rem;
   }
 }
 
