@@ -547,20 +547,23 @@ i {
     border: 1px solid white;
     overflow: hidden;
 
-    a {
-      padding: 3px;
-      background-color: white;
-      border: 0;
-      color: $lightgray;
-
+    a, button {
+      padding: 3px !important;
+      background-color: white !important;
+      border: 0 !important;
+      color: $lightgray !important;
+      // padding: 5px !important;
+      @include border-radius(0);
+      font-size: 1rem;
+      
       &:hover, &:active, &.topBtnOK {
-        background-color: red;
-        color: white;
+        background-color: red !important;
+        color: white !important;
       }
     }
   }
 
-  a {
+  a, button {
     display: inline-block;
     width: 50%;
     padding: 5px;
@@ -568,24 +571,26 @@ i {
     color: $Dellblue;
     text-decoration: none;
     cursor: pointer;
+    @include border-radius(0);
+    font-size: 1rem;
 
     &.aoragne {
-      color: $Dellorange;
+      color: $Dellorange !important;
 
       &:hover, &:active, &.topBtnOKO {
-        background-color: $Dellorange;
-        color: white;
+        background-color: $Dellorange !important;
+        color: white !important;
       }
     }
 
     &:hover, &:active, &.topBtnOK {
-      background-color: $Dellblue;
-      color: white;
+      background-color: $Dellblue !important;
+      color: white !important;
     }
 
     &.topBtnOKG {
-      color: white;
-      background-color: rgba(3, 200, 37, 1.00);
+      color: white !important;
+      background-color: rgba(3, 200, 37, 1.00) !important;
     }
   }
 }
