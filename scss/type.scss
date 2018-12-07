@@ -35,12 +35,12 @@ i {
     content: attr(title);
   }
 
-  &:after {
-    display: inline-block;
-    content: '張';
-    margin-left: 5px;
-    font-size: 1rem;
-  }
+  // &:after {
+  //   display: inline-block;
+  //   content: '張';
+  //   margin-left: 5px;
+  //   font-size: 1rem;
+  // }
 }
 
 
@@ -380,6 +380,12 @@ i {
         font-family: 'icomoon';
         font-size: 2rem;
         margin-right: 10px;
+        transform:rotate(180deg);
+        -moz-transform:rotate(180deg);
+        -webkit-transform:rotate(180deg);
+        -o-transform:rotate(180deg);
+        -ms-transform:rotate(180deg);
+        transform:rotate(180deg);
       }
     }
   }
