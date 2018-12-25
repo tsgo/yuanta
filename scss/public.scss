@@ -541,17 +541,25 @@ $linecolor: rgba(191, 195, 201, .5);
       }
     }
 
-    .addBtnBoxs {
+    .lineboxs {
       display: inline-block;
-      width: 30px;
-      height: 30px;
-      float: left;
+      width: 100%;
+      border-bottom: 1px solid rgba(219, 221, 224, 1.00);
+      margin-bottom: 10px;
+      
+      .addBtnBoxs {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        float: left;
 
-      &.icon-add-outline {
-        font-size: 1.6rem;
-        color: black;
-        line-height: 30px;
-        text-align: left;
+        &.icon-add-outline {
+          font-size: 1.6rem;
+          color: black;
+          line-height: 30px;
+          text-align: left;
+          margin-bottom: 10px;
+        }
       }
     }
 
