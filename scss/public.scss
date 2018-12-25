@@ -561,7 +561,7 @@ $linecolor: rgba(191, 195, 201, .5);
       @include border-radius(5px);
       background-color: white;
       overflow: hidden;
-      margin-top: calc(100% - 130px);
+      margin-top: calc(100% - 96px - 45px);
 
       .oneType {
         display: inline-block;
