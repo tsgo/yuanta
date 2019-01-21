@@ -623,20 +623,24 @@ $linecolor: rgba(191, 195, 201, .5);
     background-color: white;
     border-top: 1px solid rgba(184, 184, 184, .2);
 
-    > a {
+    > a, button {
       display: inline-block;
       cursor: pointer;
       width: calc(100% / 6);
       text-decoration: none;
       color: $lightgray;
-      font-size: 1.3rem;
+      font-size: 1rem;
+      // font-size: 1.3rem !important;
       float: left;
+      background-color: white;
       line-height: 40px;
+      @include border-radius(0);
       @include transition(all .3s);
 
       &:hover, &:active, &.raHover {
         color: $Dellblue;
         border-top: 3px solid $Dellblue;
+        line-height: 36px;
       }
     }
   }
