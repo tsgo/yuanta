@@ -273,6 +273,10 @@ $linecolor: rgba(191, 195, 201, .5);
       padding: 20px;
     }
 
+    &.NoBottom {
+      padding: 20px 20px 0 20px;
+    }
+
     &.NoMarginTop {
       margin-top: 0;
       margin-bottom: 100px;
@@ -546,6 +550,23 @@ $linecolor: rgba(191, 195, 201, .5);
       width: 100%;
       border-bottom: 1px solid rgba(219, 221, 224, 1.00);
       margin-bottom: 10px;
+      @include clearfix();
+      
+      &.noborder {
+        border-bottom: 0;
+      }
+
+      button {
+        display: inline-block;
+        padding: 5px 8px;
+        @include border-radius(3px);
+        border: 0;
+        outline: 0;
+        float: right;
+        background-color: #0077cc;
+        color: white;
+        font-size: 1rem;
+      }
       
       .addBtnBoxs {
         display: inline-block;
