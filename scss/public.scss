@@ -631,6 +631,43 @@ $linecolor: rgba(191, 195, 201, .5);
       width: 100%;
       margin-top: 15px;
     }
+
+    .smenu_boxs {
+      display: none;
+      width: 100%;
+      height: 40px;
+      margin-bottom: 40px;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      background-color: white;
+      border-top: 1px solid rgba(184, 184, 184, .2);
+      @include clearfix();
+
+      &.smenu_open {
+        display: inline-block;
+      }
+      
+      > a, button {
+        display: inline-block;
+        float: left;
+        cursor: pointer;
+        width: 50%;
+        color: $lightgray;
+        font-size: 1rem;
+        text-decoration: none;
+        line-height: 40px;
+        @include border-radius(0);
+        @include transition(all .3s);
+        text-align: center;
+
+        &:hover, &:active {
+          color: $Dellblue;
+          border-top: 3px solid $Dellblue;
+          line-height: 36px;
+        }
+      }
+    }
   }
 
   // 6小格選單
@@ -644,7 +681,7 @@ $linecolor: rgba(191, 195, 201, .5);
     background-color: white;
     border-top: 1px solid rgba(184, 184, 184, .2);
 
-    > a, button {
+    > a, button, span.smenu {
       display: inline-block;
       cursor: pointer;
       width: calc(100% / 6);
@@ -652,6 +689,7 @@ $linecolor: rgba(191, 195, 201, .5);
       color: $lightgray;
       font-size: 1rem;
       // font-size: 1.3rem !important;
+      text-align: center;
       float: left;
       background-color: white;
       line-height: 40px;
@@ -666,6 +704,8 @@ $linecolor: rgba(191, 195, 201, .5);
     }
   }
 }
+
+
 
 .cardBoxs {
   display: inline-block;

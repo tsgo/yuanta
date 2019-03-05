@@ -27,6 +27,10 @@ $(function () {
     });
   });
 
+  $('.smenu').click(function() {
+    $('.smenu_boxs').addClass('smenu_open');
+  });
+
   $('.icon-menu').click(function() {
     $('.main').addClass('nav_hover');
     $('#r_menu_boxs').addClass('nav_open');
