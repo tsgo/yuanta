@@ -181,6 +181,42 @@ textarea {
     outline: 0;
     border: 0;
 
+    &.but_order {
+      width: 50% !important;
+
+      &:before {
+        display: inline-block;
+        content: '\f25a' !important;
+        font-family: 'icomoon';
+        margin-top: 3px;
+        margin-right: 3px;
+      }
+    }
+
+    &.but_de {
+      width: 50% !important;
+      
+      &:before {
+        display: inline-block;
+        content: '\e908' !important;
+        font-family: 'icomoon';
+        margin-top: 3px;
+        margin-right: 3px;
+      }
+    }
+
+    &.but_de_all {
+      width: 100% !important;
+      
+      &:before {
+        display: inline-block;
+        content: '\e908' !important;
+        font-family: 'icomoon';
+        margin-top: 3px;
+        margin-right: 3px;
+      }
+    }
+
     &.but2 {
       width: calc(100% / 2);
 
