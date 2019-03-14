@@ -47,97 +47,30 @@ $lightgray: rgba(184, 184, 184, 1.00);
 $linecolor: rgba(191, 195, 201, .5);
 
 
-// .nav_list {
-//   display: inline-block;
-//   // display: none;
+#top_btn {
+  display: inline-block;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  width:40px;
+  height:40px;
+  z-index: 25;
+  color: white;
+  cursor: pointer;
+  background-color: #004898;
+  @include border-radius(30px);
 
-//   &.nav_open {
-//     display: inline-block;
-//   }
+  &:before {
+    display: inline-block;
+    content: '\e902';
+    font-family: icomoon;
+    font-size: 30px;
+    width: 100%;
+    line-height: 40px;
+    margin-bottom: -5px;
+  }
+}
 
-//   @include transition(opacity .4s, left .3s);
-//   width: 240px;
-//   position: fixed;
-//   top: 0;
-//   left: 0;
-//   z-index: 999999;
-
-//   height: 100%;
-//   background-color: white;
-
-//   > div {
-//     display: inline-block;
-//     width: 100%;
-//     border-bottom: 1px solid rgba(226, 226, 226, 1.00);
-//     padding: 10px 20px;
-//     @include clearfix();
-
-//     .icon-close {
-//       display: inline-block;
-//       cursor: pointer;
-//       width: 30px;
-//       height: 30px;
-//       float: right;
-//       font-size: 1.3rem;
-//       line-height: 30px;
-//       text-decoration: none;
-//       text-align: right;
-//       color: $gray;
-//     }
-
-//     a {
-//       display: inline-block;
-//       width: calc(100% - 45px);
-//       font-size: 1.2rem;
-//       color: $gray;
-//       text-decoration: none;
-//       text-align: left;
-//       cursor: pointer;
-//       line-height: 30px;
-//     }
-
-//     b {
-//       display: inline-block;
-//       float: left;
-//       width: 30px;
-//       height: 30px;
-//       // background-color: rgba(81, 193, 238, 1.00);
-//       border: 1px solid rgba(81, 193, 238, 1.00);
-//       @include border-radius(15px);
-//       overflow: hidden;
-      
-//       .navicon {
-//         display: inline-block;
-//         width: 20px;
-//         height: 20px;
-//         background-color: white;
-//         margin: 3px;
-
-//         .img {
-//           width: 100%;
-//           max-width: 20px;
-//         }
-//       }
-//     }
-//   }
-// }
-
-// .nav_balck {
-//   display: none;
-
-//   &.b_open {
-//     display: inline-block;
-//   }
-
-//   @include transition(opacity .4s, left .3s);
-//   position: fixed;
-//   top: 0;
-//   left: 240px;
-//   z-index: 888;
-//   width: 100%;
-//   height: 100%;
-//   background-color: rgba(39, 40, 34, .5);
-// }
 
 
 .main {
@@ -166,6 +99,7 @@ $linecolor: rgba(191, 195, 201, .5);
   &.centgray_l {
     background-color: rgba(243, 243, 243, 1.00);
   }
+
 
   // 上方header
   header {
@@ -630,6 +564,128 @@ $linecolor: rgba(191, 195, 201, .5);
       display: inline-block;
       width: 100%;
       margin-top: 15px;
+
+      &.seI {
+        margin-top: 0;
+        margin-bottom: 15px;
+      }
+
+      &.seIN {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+
+      button {
+        display: inline-block;
+        width: calc(50% - 5px);
+        background-color: white;
+        font-size: .8rem;
+        @include transition(all .3s);
+        @include border-radius(3px);
+        outline: 0;
+        border: 1px solid #dbdde0;
+        padding: 10px 0;
+        
+        &:first-child {
+          float: left;
+        }
+
+        &:last-child {
+          float: right;
+        }
+
+        &:hover {
+          background-color: #004898;
+          color: white;
+        }
+      }
+
+      .t2 {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+
+        // @include range-width(0, 768px) {
+        //   padding: 16px;
+        //   margin-top: 16px;
+        // } 
+        // @include range-width(0, 420px) {
+        //   width: calc(100% + 8px * 2);
+        //   margin-left: -8px;
+        // }
+        > div {
+          display: inline-block;
+          width: 100%;
+          overflow: auto;
+        }
+
+        > div {
+          table {
+            margin: 0;
+            width: 100%;
+            min-width: 1200px;
+            border-spacing: 0;
+            border-collapse: separate;
+            text-align: left;
+            color: rgba(46, 47, 48, 1.00);
+            font-size: .9rem;
+
+            &.t7 {
+              min-width: 600px;
+            }
+
+            thead {
+              width: 100%;
+              tr {
+                height: 32px;
+                th {
+                  padding: 6px;
+                  background-color: #004898;
+                  color: white;
+                  border-left: 1px solid rgba(214, 215, 216, 1.00);
+                  &:last-child {
+                    border-right: 1px solid rgba(214, 215, 216, 1.00);
+                  }
+                }
+                &:first-child {
+                  th {
+                    border-top: 1px solid rgba(214, 215, 216, 1.00);
+                  }
+                }
+              }
+            }
+
+            tbody {
+              width: 100%;
+              tr {
+                min-height: 32px;
+                background-color: white;
+                td {
+                  padding: 6px;
+                  border-top: 1px solid rgba(214, 215, 216, 1.00);
+                  border-left: 1px solid rgba(214, 215, 216, 1.00);
+                  &:last-child {
+                    border-right: 1px solid rgba(214, 215, 216, 1.00);
+                  }
+                  vertical-align: middle;
+                  // line-height: 33px;
+                }
+
+                &:nth-child(2n) {
+                  background-color: white;
+                }
+
+                &:last-child {
+                  td {
+                    border-bottom: 1px solid rgba(214, 215, 216, 1.00);
+                  }
+                }
+              }
+            }
+
+          }
+        }
+      }
     }
 
     .smenu_boxs {
@@ -803,6 +859,10 @@ $linecolor: rgba(191, 195, 201, .5);
       color: $Dellblue;
       border-left: 2px solid $Dellblue;
     }
+
+    &.th {
+      padding-left: 40px;
+    }
   }
 
   > span, > a {
@@ -930,7 +990,6 @@ $linecolor: rgba(191, 195, 201, .5);
   height: 100%;
   background-color: rgba(39, 40, 34, .5);
 }
-
 
 
 
