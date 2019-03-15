@@ -69,6 +69,18 @@ $linecolor: rgba(191, 195, 201, .5);
     line-height: 40px;
     margin-bottom: -5px;
   }
+
+  &.reversal {
+    &:before {
+      display: inline-block;
+      font-family: icomoon;
+      font-size: 30px;
+      width: 100%;
+      line-height: 40px;
+      content: '\e903'; 
+      margin-bottom: 0;
+    }
+  }
 }
 
 
