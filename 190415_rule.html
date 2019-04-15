@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="tw">
+  <head>
+    <meta http-equiv="Content-Language" content="zh-tw" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+
+    <title>元大正權</title>
+
+    <link href="css/public.css" rel="stylesheet" type="text/css" />
+    <link href="css/icon.css" rel="stylesheet" type="text/css" />
+    <link href="css/type.css" rel="stylesheet" type="text/css" />
+
+    <script src="js/jquery_v1.10.2/jquery-1.10.2.min.js" language="javascript" type="text/javascript" ></script>
+    <script src="js/public.js" language="javascript" type="text/javascript" ></script>
+    <script src="js/imgLiquid/imgLiquid-min.js"></script>
+
+  </head>
+
+  <body lang="zh-tw">
+
+    <div id='top_btn'></div>
+    
+    <div class="main">
+      <header>
+        <div class='nav_boxs icon-menu'></div>
+        <div class='title_type'>交易遊戲規則</div>
+      </header>
+
+      <div class='cent_boxs haveSpace'>
+        <!-- 列表 -->
+        <div class='list_boxs'>
+          <div class='listNum'>01.</div>
+          <div class='listText'>
+            每位使用者皆有兩種情境「模擬交易」及「權民大賽」的帳戶可進行操作。
+          </div>
+        </div>
+
+        <div class='list_boxs'>
+          <div class='listNum'>02.</div>
+          <div class='listText'>
+            「模擬交易」及「權民大賽」情境的帳戶起始金額各有 50 萬。
+          </div>
+        </div>
+
+        <div class='list_boxs'>
+          <div class='listNum'>03.</div>
+          <div class='listText'>
+            任一交易日登入「模擬交易」及「權民大賽」即贈送虛擬資金5,000元。
+          </div>
+        </div>
+
+        <div class='list_boxs'>
+          <div class='listNum'>04.</div>
+          <div class='listText'>
+            交易標的：所有上市、上櫃掛牌之認購(售)權證(以下簡稱權證)，不含牛熊證、展延型牛熊證。
+          </div>
+        </div>
+
+        <div class='list_boxs'>
+          <div class='listNum'>05.</div>
+          <div class='listText'>交易方式：</div>
+          <div class='listText rule'>
+            <div class='rule_boxs'>
+              <div class='r_num'>(1)</div>
+              <div class='r_text'>交易時段：交易日09:00 ~ 13:30，14：30後的委託單視為隔日的預約單。</div>
+            </div>
+
+             <div class='rule_boxs'>
+              <div class='r_num'>(2)</div>
+              <div class='r_text'>本交易平台不提供盤後與零股交易。不提供權證履約。</div>
+            </div>
+
+             <div class='rule_boxs'>
+              <div class='r_num'>(3)</div>
+              <div class='r_text'>下單時，單筆委託張數上限為499張。</div>
+            </div>
+
+             <div class='rule_boxs'>
+              <div class='r_num'>(4)</div>
+              <div class='r_text'>下單成功後，系統立即撮合一次；未立即成交委託，待下一次系統撮合時間繼續撮合。</div>
+            </div>
+
+             <div class='rule_boxs'>
+              <div class='r_num'>(5)</div>
+              <div class='r_text'>(1) 下單價格：買進價格僅可≤最佳委賣價格、賣出價格僅可最佳委買價格，若不符合上述規則，則無法進行委託。</div>
+            </div>
+
+             <div class='rule_boxs'>
+              <div class='r_num'>(6)</div>
+              <div class='r_text'>前一日需有庫存部位才能賣出下單；當日買進成交部位不得當日賣出。</div>
+            </div>
+          </div>
+        </div>
+
+        <div class='list_boxs'>
+          <div class='listNum'>06.</div>
+          <div class='listText'>交易成本：</div>
+        </div>
+        <div class='list_boxs r_table'>
+          <div class='r_bbg'>權證交易</div>
+          <div class='r_b50 r_leftbor'>手續費<br/>( 買賣皆需收取 )</div>
+          <div class='r_b50'>證券交易稅<br/>( 僅賣出收取 )</div>
+          <div class='r_b50 r_leftbor'>1.425‰<br/>單筆最低 20</div>
+          <div class='r_b50'>1‰</div>
+        </div>
+
+        <div class='list_boxs'>
+          <div class='listNum'>07.</div>
+          <div class='listText'>帳戶資訊計算公式：</div>
+        </div>
+        <div class='list_boxs r_table'>
+          <div class='r_b50 r_b30 r_notop'>欄位名稱</div>
+          <div class='r_b50 r_b70 r_notop r_rightbor'>計算方式</div>
+          <div class='r_b50 r_b30'>現金餘額</div>
+          <div class='r_b50 r_b70 r_rightbor r_textleft'>
+            前一日現金餘額<br/>
+            +  當日登入加贈<br/>
+            –  當日買進成交金額 – 實際買進手續費<br/>
+            +  當日賣出成交金額 – 實際賣出交易稅 – 實際賣出手續費
+          </div>
+          <div class='r_b50 r_b30'>可委託餘額</div>
+          <div class='r_b50 r_b70 r_rightbor r_textleft'>
+            現金餘額<br/>
+            – 當日買進委託金額 – 預估買進手續費
+          </div>
+          <div class='r_b50 r_b30'>登入加贈</div>
+          <div class='r_b50 r_b70 r_rightbor r_textleft'>交易日登入天數 * 5,000元/(日)</div>
+          <div class='r_b50 r_b30'>權證價值</div>
+          <div class='r_b50 r_b70 r_rightbor r_textleft'>(庫存權證 * 權證市價)的全部加總</div>
+          <div class='r_b50 r_b30'>總資產</div>
+          <div class='r_b50 r_b70 r_rightbor r_textleft'>現金餘額+權證價值</div>
+          <div class='r_b50 r_b30'>獲利</div>
+          <div class='r_b50 r_b70 r_rightbor r_textleft'>已實現損益 + 未實現損益</div>
+        </div>
+
+        <div class='list_boxs'>
+          <div class='listNum'>08.</div>
+          <div class='listText'>損益計算方式：</div>
+          <div class='listText rule'>
+            <div class='rule_boxs'>
+              <div class='r_num'>(1)</div>
+              <div class='r_text'>已實現損益 = 賣出稅費後金額 – 買進稅費後金額。</div>
+            </div>
+
+            <div class='rule_boxs'>
+              <div class='r_num'>(2)</div>
+              <div class='r_text'>未實現損益 = 預估賣出稅費後金額 – 買進稅費後金額。</div>
+            </div>
+
+            <div class='rule_boxs'>
+              <div class='r_num'>(3)</div>
+              <div class='r_text'>若持有權證部位到期，將以到期日當天收盤後公告之結算價格計算，併入已實現損益。</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>  
+
+    <!-- 手機選單 -->
+    <div id='r_menu_boxs'>
+      <span class='ncu'><i class='icon-close'></i></span>
+
+      <a class='db' href='#'>
+        <b><i class='navicon'><img src="img/nav01.png"></i></b>
+        下單
+      </a>
+      <a class='db' href='#'>
+        <b><i class='navicon'><img src="img/nav16.png"></i></b>
+        委託查詢
+      </a>
+      <!-- <a class='db' href='#'>
+        <b><i class='navicon'><img src="img/nav13.png"></i></b>
+        到價通知
+      </a> -->
+      <a class='db' href='#'>
+        <b><i class='navicon'><img src="img/nav12.png"></i></b>
+        獲利排行
+      </a>
+      <a class='db' href='#'>
+        <b><i class='navicon'><img src="img/nav11.png"></i></b>
+        團隊管理
+      </a>
+
+      <span>
+        <b><i class='navicon'><img src="img/nav10.png"></i></b>
+        我的資訊
+      </span>
+      <div>
+        <a>下單</a>
+        <a>帳戶</a>
+        <a>委託</a>
+        <a>自選</a>
+        <a>紅利</a>
+        <a>排行</a>
+      </div>
+
+      <a class='db' href='#'>
+        <b><i class='navicon'><img src="img/nav01.png"></i></b>
+        權民大賽比賽辦法
+      </a>
+      <a class='db' href='#'>
+        <b><i class='navicon'><img src="img/nav01.png"></i></b>
+        模擬交易規則
+      </a>
+    </div>
+    <div id='menu_back'></div>
+  </body>
+
+</html>
+
+
+
+
+
+
+
