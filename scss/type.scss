@@ -30,10 +30,33 @@ b {
 }
 
 .date9 {
-  background-color: white;
+  // background-color: white;
   width: 100%;
   padding-bottom: 20px;
-  font-size: 1.2rem;
+  // font-size: 1.2rem;
+  font-size: 1rem;
+
+  &.date_orange {
+    background-color: #fff1e8;
+  }
+  &.date_blue {
+    background-color: rgba(194, 226, 255, 1.00);
+  }
+}
+
+.date10 {
+  // background-color: white;
+  width: 100%;
+  padding: 20px 0;
+  // font-size: 1.2rem;
+  font-size: 1rem;
+
+  &.date_orange {
+    background-color: #fff1e8;
+  }
+  &.date_blue {
+    background-color: rgba(194, 226, 255, 1.00);
+  }
 }
 
 .pptype {
@@ -151,6 +174,29 @@ b {
 
   &:last-child {
     border-bottom: 0;
+  }
+
+  &.bonus {
+    font-size: .9rem;
+    padding: 10px 5px;
+
+    &:before {
+      display: inline-block;
+      width: 30%;
+      content: attr(title);
+      color: black
+    }
+
+    &:after {
+      display: inline-block;
+      width: 1px;
+      content: '';
+      background-color: $linecolor;
+      height: 41px;
+      position: absolute;
+      left: 28%;
+      top: 0;
+    }
   }
 
   &:before {
@@ -435,11 +481,15 @@ b {
       &.r_b30 {
         display: inline-block;
         width: 30%;
+
+        &.bgb01 {color: white; background-color: rgba(0, 72, 152, 1.00);}
       }
 
       &.r_b70 {
         display: inline-block;
         width: 70%;
+
+        &.bgb01 {color: white; background-color: rgba(0, 72, 152, 1.00);}
       }
 
       &.r_textleft {
@@ -457,6 +507,10 @@ b {
 
       &.r_rightbor {
         border-left: 1px solid rgba(0, 72, 152, 1.00);
+
+        &.r_www {
+          border-left: 1px solid white;
+        }
       }
     }
   }
@@ -524,6 +578,7 @@ b {
   @include border-radius(3px);
   border: 1px solid $Dellblue;
   @include clearfix();
+  background-color: white;
 
   &.topBtnO {
     border: 1px solid $Dellorange;
@@ -687,6 +742,11 @@ b {
     &.topBtnOKG {
       color: white !important;
       background-color: rgba(3, 200, 37, 1.00) !important;
+
+      &:hover, &:active {
+        color: white !important;
+        background-color: rgba(3, 200, 37, 1.00) !important;
+      }
     }
   }
 }
