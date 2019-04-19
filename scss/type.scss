@@ -584,6 +584,19 @@ b {
     border: 1px solid $Dellorange;
   }
 
+  &.topnew {
+    border: 0;
+    width: calc(50% - 5px);
+
+    &:first-child {
+      float: left;
+    }
+
+    &:last-child {
+      float: right;
+    }
+  }
+
   &.otherB {
     border: 0;
     color: $lightgray;
@@ -722,8 +735,11 @@ b {
     color: $Dellblue;
     text-decoration: none;
     cursor: pointer;
-    @include border-radius(0);
+    @include border-radius(2px);
     font-size: 1rem;
+    outline: 0;
+    border: 0;
+    background-color: white;
 
     &.aoragne {
       color: $Dellorange !important;
@@ -732,7 +748,13 @@ b {
         background-color: $Dellorange !important;
         color: white !important;
       }
+
+      &.ao100 {
+        width: 100%;
+        border: 1px solid rgba(239, 239, 241, 1.00);
+      }
     }
+
 
     &:hover, &:active, &.topBtnOK {
       background-color: $Dellblue !important;
