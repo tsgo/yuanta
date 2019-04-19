@@ -587,12 +587,13 @@ b {
   &.topnew {
     border: 0;
     width: calc(50% - 5px);
+    margin-bottom: 15px;
 
-    &:first-child {
+    &.tl {
       float: left;
     }
 
-    &:last-child {
+    &.tr {
       float: right;
     }
   }
@@ -735,7 +736,7 @@ b {
     color: $Dellblue;
     text-decoration: none;
     cursor: pointer;
-    @include border-radius(2px);
+    @include border-radius(3px);
     font-size: 1rem;
     outline: 0;
     border: 0;
@@ -751,7 +752,15 @@ b {
 
       &.ao100 {
         width: 100%;
-        border: 1px solid rgba(239, 239, 241, 1.00);
+        border: 1px solid #dbdde0;
+        padding: 10px 0;
+        font-size: .8rem;
+        color: black !important;
+
+        &:hover, &:active {
+          background-color: $Dellorange !important;
+          color: white !important;
+        }
       }
     }
 
