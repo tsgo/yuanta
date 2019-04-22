@@ -20,7 +20,7 @@ $(function () {
     window.scrollTo(scrollPosition[0], scrollPosition[1]);
   }
 
-  $('#r_menu_boxs').each (function () {
+ $('#r_menu_boxs').each (function () {
     var $that = $(this);
     $that.find ('span').click (function () {
       $(this).toggleClass ('s');
@@ -51,8 +51,9 @@ $(function () {
     $('#r_menu_boxs').removeClass('nav_open');
     $('#menu_back').removeClass('b_open');
     scrollUnlock();
-  });
- 
+});
+
+  
   $(".teachPic, .icon_box, .navicon").imgLiquid ();
 
   // $("").imgLiquid (position: '50%');

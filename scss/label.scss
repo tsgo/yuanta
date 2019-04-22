@@ -167,6 +167,17 @@ textarea {
   border-bottom: 1px solid rgba(241, 241, 241, 1.00);
   @include clearfix();
   text-align: left;
+  color: black;
+  font-size: .9rem;
+
+  &.tpad {
+    padding: 10px 5px;
+  }
+
+  &.tother {
+    font-size: 1rem;
+    border-bottom: 1px solid rgba(219, 213, 211, 1.00);
+  }
 
   &:last-child {
     border-bottom: 0;

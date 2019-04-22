@@ -734,9 +734,17 @@ $linecolor: rgba(191, 195, 201, .5);
         text-align: center;
 
         &:hover, &:active {
-          color: $Dellblue;
-          border-top: 3px solid $Dellblue;
-          line-height: 36px;
+          &.semublue {
+            color: $Dellblue;
+            border-top: 3px solid $Dellblue;
+            line-height: 36px;
+          }
+
+          &.semuorange {
+            color: $Dellorange;
+            border-top: 3px solid $Dellorange;
+            line-height: 36px;
+          }
         }
       }
     }
@@ -874,6 +882,11 @@ $linecolor: rgba(191, 195, 201, .5);
     &:hover, &:active {
       color: $Dellblue;
       border-left: 2px solid $Dellblue;
+
+      &.s_menuorange {
+        color: $Dellorange;
+        border-left: 2px solid $Dellorange;
+      }
     }
 
     &.th {
