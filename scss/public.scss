@@ -346,7 +346,9 @@ $linecolor: rgba(191, 195, 201, .5);
       @include clearfix();
 
       &.listBlue {background-color: rgba(194, 226, 255, 1.00);}
+      &.listBlue_d {background-color: rgba(159, 203, 244, 1.00);}
       &.listOragne {background-color: rgba(255, 241, 232, 1.00);}
+      &.listOragne_d {background-color: rgba(242, 211, 192, 1.00);}
 
       &.height75 {
         height: 75px;
@@ -734,17 +736,21 @@ $linecolor: rgba(191, 195, 201, .5);
         text-align: center;
 
         &:hover, &:active {
-          &.semublue {
-            color: $Dellblue;
-            border-top: 3px solid $Dellblue;
-            line-height: 36px;
-          }
+          color: $Dellblue;
+          border-top: 3px solid $Dellblue;
+          line-height: 36px;
+        }
 
-          &.semuorange {
-            color: $Dellorange;
-            border-top: 3px solid $Dellorange;
-            line-height: 36px;
-          }
+        &.semublue {
+          color: $Dellblue;
+          border-top: 3px solid $Dellblue;
+          line-height: 36px;
+        }
+
+        &.semuorange {
+          color: $Dellorange;
+          border-top: 3px solid $Dellorange;
+          line-height: 36px;
         }
       }
     }
@@ -882,11 +888,16 @@ $linecolor: rgba(191, 195, 201, .5);
     &:hover, &:active {
       color: $Dellblue;
       border-left: 2px solid $Dellblue;
+    }
 
-      &.s_menuorange {
-        color: $Dellorange;
-        border-left: 2px solid $Dellorange;
-      }
+    &.s_menublue {
+      color: $Dellblue;
+      border-left: 2px solid $Dellblue;
+    }
+
+    &.s_menuorange {
+      color: $Dellorange;
+      border-left: 2px solid $Dellorange;
     }
 
     &.th {
