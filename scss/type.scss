@@ -564,6 +564,11 @@ b {
         text-align: justify;
         text-justify:inter-ideograph;
       }
+
+      &.rule_40 {
+        width: calc(100% - 25px);
+        float: right;
+      }
     }
   }
 }
